@@ -46,7 +46,7 @@ env:
   REGION: ${{ secrets.REGION }} # Google Cloud region
   SERVICE_EMAIL: ${{ secrets.SERVICE_EMAIL }} # Service account email
   WORKLOAD_IDENTITY_PROVIDER: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }} # Workload Identity Provider
-  GAR_REPOSITORY_NAME: ${{ secrets.REPOSITORY_NAME }} # Artifact Registry repository
+  GAR_REPOSITORY_NAME: ${{ secrets.GAR_REPOSITORY_NAME }} # Artifact Registry repository
 
   SCULPTURE_IMAGE: "sculpture-image" # backend image name
 
