@@ -90,7 +90,7 @@ jobs:
       - name: "Build and Push web Image to Artifact Registry"
         run: |-
           DOCKER_TAG="${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.GAR_REPOSITORY_NAME }}/${{ env.SCULPTURE_IMAGE }}:${{ github.sha }}"
-          docker build -t "${DOCKER_TAG}" .
+          docker build -f . -t "${DOCKER_TAG}" .
           gcloud auth configure-docker '${{ env.REGION }}-docker.pkg.dev'
           docker push "${DOCKER_TAG}"
       - name: "Deploy web Image to Cloud Run"
